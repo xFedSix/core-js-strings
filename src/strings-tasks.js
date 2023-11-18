@@ -160,12 +160,12 @@ function repeatString(str, times) {
  */
 function removeFirstOccurrences(str, value) {
   // throw new Error('Not implemented');
-  const firstOccurrences = str.indexOf(value);
-  if (firstOccurrences === -1) {
+  const firstOccurrence = str.indexOf(value);
+  if (firstOccurrence === -1) {
     return str;
   }
   return (
-    str.slice(0, firstOccurrences) + str.slice(firstOccurrences + value.length)
+    str.slice(0, firstOccurrence) + str.slice(firstOccurrence + value.length)
   );
 }
 
