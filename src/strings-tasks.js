@@ -227,8 +227,9 @@ function sumOfCodes(str) {
  *   startsWith('Hello World', 'World') => false
  *   startsWith('Hello World', 'Hello') => true
  */
-function startsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function startsWith(str, substr) {
+  // throw new Error('Not implemented');
+  return str.startsWith(substr);
 }
 
 /**
@@ -242,8 +243,9 @@ function startsWith(/* str, substr */) {
  *   endsWith('Hello World', 'World') => true
  *   endsWith('Hello World', 'Hello') => false
  */
-function endsWith(/* str, substr */) {
-  throw new Error('Not implemented');
+function endsWith(str, substr) {
+  // throw new Error('Not implemented');
+  return str.endsWith(substr);
 }
 
 /**
@@ -259,8 +261,11 @@ function endsWith(/* str, substr */) {
  *   formatTime(0, 45) => "00:45"
  *   formatTime(0, 0) => "00:00"
  */
-function formatTime(/* minutes, seconds */) {
-  throw new Error('Not implemented');
+function formatTime(minutes, seconds) {
+  // throw new Error('Not implemented');
+  const minutesToString = minutes.toString().padStart(2, '0');
+  const secondsToString = seconds.toString().padStart(2, '0');
+  return `${minutesToString}:${secondsToString}`;
 }
 
 /**
@@ -273,8 +278,9 @@ function formatTime(/* minutes, seconds */) {
  *   reverseString('abcdef') => 'fedcba'
  *   reverseString('12345') => '54321'
  */
-function reverseString(/* str */) {
-  throw new Error('Not implemented');
+function reverseString(str) {
+  // throw new Error('Not implemented');
+  return str.split('').reverse().join('');
 }
 
 /**
@@ -288,8 +294,9 @@ function reverseString(/* str */) {
  *   orderAlphabetically('textbook') => 'bekoottx'
  *   orderAlphabetically('abc123xyz') => '123abcxyz'
  */
-function orderAlphabetically(/* str */) {
-  throw new Error('Not implemented');
+function orderAlphabetically(str) {
+  // throw new Error('Not implemented');
+  return str.split('').sort().join('');
 }
 
 /**
