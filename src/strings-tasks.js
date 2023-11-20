@@ -407,8 +407,18 @@ function reverseWords(/* str */) {
  *   invertCase('JavaScript is Fun') => 'jAVAsCRIPT IS fUN'
  *   invertCase('12345') => '12345'
  */
-function invertCase(/* str */) {
-  throw new Error('Not implemented');
+function invertCase(str) {
+  // throw new Error('Not implemented');
+  let res = '';
+  for (let i = 0; i < str.length; i += 1) {
+    const char = str[i];
+    if (char === char.toUpperCase()) {
+      res += char.toLowerCase();
+    } else {
+      res += char.toUpperCase();
+    }
+  }
+  return res;
 }
 
 /**
@@ -424,8 +434,10 @@ function invertCase(/* str */) {
  *   getStringFromTemplate('John','Doe') => 'Hello, John Doe!'
  *   getStringFromTemplate('Chuck','Norris') => 'Hello, Chuck Norris!'
  */
-function getStringFromTemplate(/* firstName, lastName */) {
-  throw new Error('Not implemented');
+function getStringFromTemplate(firstName, lastName) {
+  // throw new Error('Not implemented');
+  const joinedString = `${firstName} ${lastName}`;
+  return `Hello, ${joinedString}!`;
 }
 
 /**
@@ -453,8 +465,9 @@ function extractNameFromTemplate(/* value */) {
  *   unbracketTag('<span>') => 'span'
  *   unbracketTag('<a>') => 'a'
  */
-function unbracketTag(/* str */) {
-  throw new Error('Not implemented');
+function unbracketTag(str) {
+  // throw new Error('Not implemented');
+  return str.slice(1, -1);
 }
 
 /**
